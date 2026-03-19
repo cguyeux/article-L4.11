@@ -248,11 +248,7 @@ The 825-strain dataset originates from 57~BioProjects
 which approximately doubles the number of indexed genomes compared with
 version~2.  Complete variant reports (annotated SNPs, gene coverage,
 insertion sequences, and regions of difference) were retrieved for
-822~SRAs via the TBannotator~v3.2 REST API; the remaining 3~SRAs
-lacked processed reports at the time of analysis.
-All population genomic analyses (drug resistance, structural variation,
-selection pressure, \textit{in silico} RD-typing) are based on this
-822-strain dataset unless otherwise stated.
+all 825~SRAs via the TBannotator~v3.2 REST API.
 
 For phylogenetic context, up to 10~SRAs per non-target lineage were included,
 along with a \lignee{L8} outgroup (\spdi{SRR1173284}), the most
@@ -268,7 +264,7 @@ range indicate potential contamination or mixed infection);
 (iii)~mean sequencing depth $\geq$15$\times$.
 SRAs failing any of these criteria were excluded from further analysis.
 
-Mapping statistics for the 822~SRAs that passed QC were extracted
+Mapping statistics for the 825~SRAs that passed QC were extracted
 from TBannotator~v3.2 variant reports.  Mean sequencing depth
 ranged from 20.8$\times$ to 462.0$\times$ (median 87.0$\times$).
 Genome coverage exceeded 95\% in all SRAs.
@@ -321,7 +317,7 @@ markers from Coll, Freschi, Napier, Stucki, classification systems \cite{coll201
 \subsubsection{Drug resistance profiling}
 
 Genotypic drug resistance predictions were derived from the annotated
-SNPs in the TBannotator~v3.2 variant reports for all 822~SRAs.
+SNPs in the TBannotator~v3.2 variant reports for all 825~SRAs.
 Each SNP carries SnpEff functional annotation (gene, HGVS protein
 change, impact class) \cite{cingolani2012}; resistance-associated mutations were identified
 by cross-referencing with the WHO Catalogue of mutations associated
@@ -339,16 +335,16 @@ confidence intervals (Bonferroni-corrected).
 \subsubsection{IS6110 copy-number estimation and genomic structural variation}
 
 Insertion sequence profiles were extracted from TBannotator~v3.2
-variant reports for all 822~SRAs.  TBannotator detects IS insertion
+variant reports for all 825~SRAs.  TBannotator detects IS insertion
 positions by analysing soft-clipping signals in the BAM alignment:
 reads whose clipped portion maps to a known IS element identify the
 insertion site, orientation (forward or reverse), and element identity.
 IS6110 copy numbers, novel insertion sites, and insertion orientations
-were computed for all 822~SRAs (91~\lignee{L4.11.1},
-731~\lignee{L4.11.2}).
+were computed for all 825~SRAs (91~\lignee{L4.11.1},
+731~\lignee{L4.11.2}, 3~basal).
 
 Gene deletions were inferred from the variant reports
-(822~SRAs), which record ``missing genes'' (genes with $<$5\%
+(825~SRAs), which record ``missing genes'' (genes with $<$5\%
 coverage) and ``missing RD'' (named and custom genomic segments with
 insufficient coverage).  Deletions shared by $\geq$90\% of a
 sub-lineage were considered lineage-defining.
@@ -373,7 +369,7 @@ Mycobrowser and the literature.
 
 Selection pressure was assessed using the site-based ratio of unique
 non-synonymous to synonymous variant positions ($p_N/p_S$), computed across
-all protein-coding genes with at least one variant in the 822-strain
+all protein-coding genes with at least one variant in the 825-strain
 dataset.  The $p_N/p_S$ ratio was calculated for each functional category
 and compared between sub-lineages.
 Because this site-based metric does not correct for the relative
@@ -421,10 +417,8 @@ analysis) was performed using the country of isolation for
 % ── Results ──────────────────────────────────────────────────────────────────
 \section{Results}
 
-Unless otherwise noted, phylogenetic and distance-based analyses use all
-825~SRAs, whereas functional analyses (drug resistance, structural
-variation, selection pressure, RD-typing) use the 822-strain subset with
-complete TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
+All analyses use the full set of 825~SRAs with complete
+TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 
 \subsection{Lineage definition and sub-lineage structure}
 
@@ -442,7 +436,7 @@ complete TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/phylo_tree_l411.png}
 	\caption{Midpoint-rooted maximum-likelihood circular phylogeny of the
-		822~\lignee{L4.11} SRAs inferred with RAxML-NG (GTR+G4 model).
+		825~\lignee{L4.11} SRAs inferred with RAxML-NG (GTR+G4 model).
 		Tips are coloured by sub-lineage assignment:
 		blue, \lignee{L4.11.1} ($n = 91$);
 		red, \lignee{L4.11.2} ($n = 731$).
@@ -558,7 +552,7 @@ expansion centred on Bangladesh.
 
 \paragraph{Core-exclusive markers.}
 
-A total of 214~core SPDIs were identified (present in all 822~SRAs).
+A total of 214~core SPDIs were identified (present in all 825~SRAs).
 Among these, 8~core-exclusive SPDIs are absent from all SRAs outside
 \lignee{L4.11}, providing unambiguous molecular markers for this sub-lineage
 (Table~\ref{tab:core_excl}).  We propose the combination of
@@ -824,7 +818,7 @@ erosion of the CRISPR locus specific to the Peruvian sub-lineage.
 \subsection{Drug resistance}
 
 Drug resistance data reveal markedly different profiles between the two
-sub-lineages.  Across all 822~\lignee{L4.11} SRAs with variant
+sub-lineages.  Across all 825~\lignee{L4.11} SRAs with variant
 reports, 278~(33.8\%) are multidrug-resistant (MDR; resistant to both
 isoniazid and rifampicin).  This rate is an order of magnitude higher
 than the global average (\textasciitilde3.3\%, WHO 2024~\cite{who2024}).
@@ -858,7 +852,7 @@ suggesting a clonal MDR genotype rather than sequential accumulation.
 		Each cell shows the percentage (and count) of SRAs
 		co-resistant to the corresponding drug pair.
 		Diagonal cells indicate single-drug resistance prevalence.
-		\textbf{Left:}~All 822~SRAs.
+		\textbf{Left:}~All 825~SRAs.
 		\textbf{Centre:}~\lignee{L4.11.1} ($n = 91$; blue scale).
 		\textbf{Right:}~\lignee{L4.11.2} ($n = 731$; red scale).
 		Note the near-saturation of the INH--RIF block in \lignee{L4.11.1},
@@ -869,7 +863,7 @@ suggesting a clonal MDR genotype rather than sequential accumulation.
 
 \paragraph{Extended resistance landscape (WHO Catalogue v2).}
 
-By cross-referencing the 822~SRAs against the
+By cross-referencing the 825~SRAs against the
 WHO Catalogue of mutations associated with drug resistance (2nd~edition,
 2023;~\cite{who2023catalogue}), we extended resistance prediction to all
 15~anti-TB medicines assessed (Figure~\ref{fig:who_resist}).
@@ -889,7 +883,7 @@ Section~\ref{sec:structural} and the Discussion for the
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/who_resistance_heatmap.png}
 	\caption{WHO Catalogue~v2 resistance predictions for \lignee{L4.11}
-		sub-lineages (822~SRAs).
+		sub-lineages (825~SRAs).
 		Bars show the percentage of SRAs carrying at least one
 		WHO-graded resistance-associated mutation (R~or~F) per drug.
 		\textbf{Left:}~\lignee{L4.11.1} ($n = 91$).
@@ -905,7 +899,7 @@ resistance, an atypical pattern since EMB resistance is conventionally
 acquired \textit{after} first-line drug resistance.
 
 To investigate this pattern, we analysed \textit{embB} mutations across
-822~\lignee{L4.11} SRAs.  Codon~406
+825~\lignee{L4.11} SRAs.  Codon~406
 of \textit{embB} emerged as a resistance hotspot specific to
 \lignee{L4.11.2}: the G406S substitution is present in 80~SRAs
 (all \lignee{L4.11.2}, 10.9\%), while
@@ -928,7 +922,7 @@ effectively constituting a \textit{de facto} seventh lineage marker
 for \lignee{L4.11}.
 
 A comprehensive analysis of drug-resistance gene mutations across
-822~SRAs reveals sharply divergent resistance trajectories between the
+825~SRAs reveals sharply divergent resistance trajectories between the
 two sub-lineages.  Isoniazid resistance in \lignee{L4.11.1} is
 exclusively mediated by \textit{katG}~S315T~\cite{vilcheze2014}
 (91.2\%, 83/91), whereas
@@ -1028,7 +1022,7 @@ shared by both sub-lineages; the former disrupts the cutinase \textit{cut1}
 \paragraph{Gene deletions.}
 
 Analysis of genes with insufficient coverage (potential deletions) across
-all 822~SRAs reveals lineage-specific deletion
+all 825~SRAs reveals lineage-specific deletion
 blocks.
 
 A contiguous block of four genes (Rv1758--Rv1762c) is deleted in
@@ -1066,7 +1060,7 @@ by deletions and IS6110 insertions rather than segmental duplications.
 \lignee{L4.11}.  All 78~canonical Regions of Difference (RD105--RD761)
 are intact in both sub-lineages, consistent with a standard Lineage~4
 profile.  Two deletions define the lineage as a whole: RD715
-(100\%, 822/822) and the 7-bp deletion in \textit{pks15/1} (100\%),
+(100\%, 825/825) and the 7-bp deletion in \textit{pks15/1} (100\%),
 accompanied by 11~shared custom genomic segments absent in 96--100\% of
 all SRAs.
 
@@ -1092,7 +1086,7 @@ exhibits $>$300~unique profiles among 731~SRAs.
 We systematically screened all non-synonymous variants in virulence gene
 families (PE/PPE, \textit{mce}, ESX/Type~VII, DosR regulon, lipid metabolism,
 toxin--antitoxin systems, sigma factors, and two-component regulators)
-across all 822~SRAs.
+across all 825~SRAs.
 
 \paragraph{PE/PPE family.}
 Twelve PE/PPE mutations are fixed ($>$90\%) in both sub-lineages,
@@ -1209,7 +1203,7 @@ to threshold choice.
 
 To assess selective constraints, we computed the ratio of unique
 non-synonymous ($p_N$) to synonymous ($p_S$) variant sites per gene
-across all 822~SRAs (2{,}966~genes;
+across all 825~SRAs (2{,}966~genes;
 5{,}537~non-synonymous and 2{,}757~synonymous sites).
 
 The genome-wide $p_N/p_S$ ratio is 2.00 overall, 2.17 for

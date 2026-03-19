@@ -1,6 +1,9 @@
 SPDI,Position,Gene,Locus,Product,Effect,Impact,AA_Change,Functional_Category,Prevalence
-NC_000962.3:787679:C:T,787680,Rv0687,Rv0687,Probable short-chain type dehydrogenase/reductase,synonymous_variant,LOW,p.Phe194Phe,Intermediary metabolism and respiration,828/828
-NC_000962.3:1116006:A:G,1116007,Rv0999,Rv0999,Unknown protein,missense_variant,MODERATE,p.Thr81Ala,Conserved hypotheticals,828/828
-NC_000962.3:1374351:C:T,1374352,Rv1231c,Rv1231c,Probable membrane protein,synonymous_variant,LOW,p.Glu171Glu,Cell wall and cell processes,828/828
-NC_000962.3:1800962:C:T,1800963,hisC1,Rv1600,Probable histidinol-phosphate aminotransferase,missense_variant,MODERATE,p.Ala23Val,Intermediary metabolism and respiration,828/828
-NC_000962.3:4328316:G:A,4328317,intergenic,ethR/Rv3856c,Intergenic region between ethR (Rv3855) and Rv3856c,intergenic_region,MODIFIER,,Regulatory,828/828
+NC_000962.3:13073:G:A,13074,ppiA/Rv0010c,Rv0009-Rv0010c,Peptidyl-prolyl isomerase region,intergenic_region,MODIFIER,,Regulatory,825/825
+NC_000962.3:787679:C:T,787680,Rv0687,Rv0687,Probable short-chain type dehydrogenase/reductase,synonymous_variant,LOW,p.Phe194Phe,Intermediary metabolism and respiration,825/825
+NC_000962.3:1116006:A:G,1116007,Rv0999,Rv0999,Unknown protein,missense_variant,MODERATE,p.Thr81Ala,Conserved hypotheticals,825/825
+NC_000962.3:1374351:C:T,1374352,Rv1231c,Rv1231c,Probable membrane protein,synonymous_variant,LOW,p.Glu171Glu,Cell wall and cell processes,825/825
+NC_000962.3:1800962:C:T,1800963,hisC1,Rv1600,Probable histidinol-phosphate aminotransferase,missense_variant,MODERATE,p.Ala23Val,Intermediary metabolism and respiration,825/825
+NC_000962.3:3505750:C:T,3505751,fadE24,Rv3140,Acyl-CoA dehydrogenase,missense_variant,MODERATE,p.Pro130Leu,Lipid metabolism,825/825
+NC_000962.3:3957394:A:G,3957395,Rv3529c,Rv3529c,Hypothetical protein,intragenic_variant,MODIFIER,,Conserved hypotheticals,825/825
+NC_000962.3:4328316:G:A,4328317,intergenic,ethR/Rv3856c,Intergenic region between ethR (Rv3855) and Rv3856c,intergenic_region,MODIFIER,,Regulatory,825/825

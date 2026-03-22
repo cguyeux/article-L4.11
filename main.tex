@@ -68,7 +68,7 @@
 
 	We identified 8~core-exclusive SPDIs defining \lignee{L4.11} and two
 	novel sub-lineages --- \lignee{L4.11.1} (91~SRAs, predominantly
-	Bangladesh, 86\% MDR) and \lignee{L4.11.2} (731~SRAs, predominantly
+	Bangladesh, 86\% MDR) and \lignee{L4.11.2} (732~SRAs, predominantly
 	Peru, 27\% MDR) --- with sharply contrasting resistance profiles.
 	\lignee{L4.11.1} carries near-universal \textit{katG}~S315T (91\%),
 	while \lignee{L4.11.2} harbours the \textit{mmpR5}~Ile67fs
@@ -232,8 +232,8 @@ All publicly available whole-genome sequences assigned to \lignee{L4.11} were
 retrieved from the TBannotator~v3.2 database.
 The lineage-defining marker \spdi{NC\_000962.3:1374351:C:T} was originally
 identified from TBannotator~v2 through a two-step procedure: first, all
-SRAs within a reasonable SPDI distance (i.e.\ number of variant
-positions relative to H37Rv) from a central L4 strain in the Coll~4.9
+SRAs within 100~SPDIs (i.e.\ variant positions relative to H37Rv)
+of the centroid strain in the Coll~4.9
 neighbourhood were selected; second, a phylogenetic tree comprising these candidates together
 with representatives of all other MTBC lineages was constructed, and the
 core-exclusive marker shared by all SRAs of the resulting monophyletic
@@ -342,7 +342,7 @@ reads whose clipped portion maps to a known IS element identify the
 insertion site, orientation (forward or reverse), and element identity.
 IS6110 copy numbers, novel insertion sites, and insertion orientations
 were computed for all 825~SRAs (91~\lignee{L4.11.1},
-731~\lignee{L4.11.2}, 3~basal).
+732~\lignee{L4.11.2}, 2~basal).
 
 Gene deletions were inferred from the variant reports
 (825~SRAs), which record ``missing genes'' (genes with $<$5\%
@@ -457,7 +457,7 @@ TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 
 The maximum-likelihood phylogeny of the 825~\lignee{L4.11} SRAs reveals
 a well-resolved tree with two clearly separated sub-clades: \lignee{L4.11.1}
-(91~SRAs, 11.0\%) and \lignee{L4.11.2} (731~SRAs, 88.6\%), plus
+(91~SRAs, 11.0\%) and \lignee{L4.11.2} (732~SRAs, 88.7\%), plus
 two deep-branching basal SRAs that lack both
 sub-lineage-defining markers.
 These basal SRAs --- SRR30679919 (Australia, PRJNA1161723),
@@ -588,8 +588,8 @@ We cross-referenced the 8~exclusive SNPs of \lignee{L4.11}
 systems.  All systems assign \lignee{L4.11} SRAs to broadly
 concordant positions within L4: Coll~4/4.9,
 Napier~4/4.9, Shitikov~4/4.9, and Stucki~4.10.  In the Freschi system,
-731~SRAs (all \lignee{L4.11.2}) are assigned to Freschi~4.11, while
-the remaining 94~SRAs (\lignee{L4.11.1} and basal) fall at the
+732~SRAs (all \lignee{L4.11.2}) are assigned to Freschi~4.11, while
+the remaining 93~SRAs (\lignee{L4.11.1} and basal) fall at the
 unresolved level~4; notably, \lignee{L4.11} is \emph{not} within
 Freschi~4.10.i2, which corresponds to a separate clade centred on
 H37Rv and the naming of L4.11 was wrongly attributed to a peruvian epidemic sub-clade.  None of the current classification systems resolved the full \lignee{L4.11} clade as
@@ -641,8 +641,8 @@ further characerizing this sublineage.
 \paragraph{Sub-lineage L4.11.2.}
 
 The complement of \lignee{L4.11.1} within \lignee{L4.11} forms a second
-well-supported sub-lineage.  \lignee{L4.11.2} comprises 731~SRAs
-(88.6\% of \lignee{L4.11}) and is defined by 44~near-core-exclusive markers
+well-supported sub-lineage.  \lignee{L4.11.2} comprises 732~SRAs
+(88.7\% of \lignee{L4.11}) and is defined by 44~near-core-exclusive markers
 (Table~\ref{tab:l4112}).
 
 \begin{table}[ht]
@@ -738,19 +738,19 @@ and \textit{gpdA2} (glycerol-3-phosphate dehydrogenase).
 The co-occurrence of mutations in both $\beta$-oxidation (\textit{fadE24})
 and PDIM/phthiocerol biosynthesis (\textit{fadD26}) is particularly
 noteworthy, as PDIMs are major virulence lipids required for phagosome
-escape and macrophage survival.
+escape and macrophage survival~\cite{lerner2018,rens2021}.
 
 \textit{Cell envelope and host--pathogen interface.}  Five additional
 markers perturb cell-envelope biology:
-\textit{pimE} G53S (phosphatidylinositol mannoside biosynthesis),
+\textit{pimE} G53S (phosphatidylinositol mannoside biosynthesis~\cite{liu2025pimE}),
 \textit{mce1D} (Mce1 operon, a cholesterol/lipid import system required
 for intracellular growth),
-\textit{PE12} (PE-family protein involved in immune evasion),
+\textit{PE12} (PE-family protein involved in immune evasion~\cite{sharma2022}),
 \textit{iniB} (isoniazid-inducible protein~B, a marker of
-cell-wall stress), and
+cell-envelope stress~\cite{boot2017}), and
 \textit{lppR} (lipoprotein, host--pathogen interface).
 The mutation in \textit{mce1D} is significant: the Mce1 complex
-mediates fatty acid import during intracellular infection, and its
+mediates fatty acid import during intracellular infection~\cite{forrellad2014}, and its
 perturbation has been linked to altered virulence and persistence
 in murine models.
 
@@ -759,24 +759,24 @@ translational and transcriptional machinery:
 \textit{rpoB} V695L (RNA polymerase $\beta$ subunit, outside
 the canonical RRDR),
 \textit{rplE} V94A (50S ribosomal protein~L5), and
-\textit{rplC} (50S ribosomal protein~L3, a linezolid target).
+\textit{rplC} (50S ribosomal protein~L3, a linezolid target~\cite{beckert2012}).
 The synonymous \textit{rplC} variant, while not expected to alter
 protein sequence, may affect mRNA structure or codon usage bias.
 
 \textit{Persistence and stress response.}  Four markers target
 persistence-related pathways:
 \textit{ppk1} G340C (polyphosphate kinase, essential for biofilm
-and long-term macrophage survival),
+and long-term macrophage survival~\cite{tiwari2019,singh2013}),
 \textit{orn} D70N (oligoribonuclease, stringent response),
 \textit{phoH1} (phosphate starvation-inducible protein, Pho regulon),
 and \textit{hsaG} (cholesterol catabolism via the Hsa pathway,
 essential for persistence in the intracellular niche).
 The \textit{hsaG} mutation adds a direct link to cholesterol-dependent
-intracellular survival, complementing the Mce1 import perturbation.
+intracellular survival~\cite{miner2009}, complementing the Mce1 import perturbation.
 
 \textit{DNA replication fidelity.}  The \textit{dnaE1} mutation
 targets the $\alpha$ subunit of DNA polymerase~III, the primary
-replicase.  Alterations in replicative fidelity could influence
+replicase~\cite{rock2015}.  Alterations in replicative fidelity could influence
 the mutation rate and adaptive potential of this sub-lineage.
 
 \textit{Histidine biosynthesis.}  Together with the \textit{hisC1}~A23V
@@ -1166,7 +1166,7 @@ corresponding to the IS6110-mediated disruption of the
 
 Profile diversity reflects the IS6110 expansion: \lignee{L4.11.1} has
 28~unique RD profiles among 91~SRAs, whereas \lignee{L4.11.2}
-exhibits $>$300~unique profiles among 731~SRAs.
+exhibits $>$300~unique profiles among 732~SRAs.
 
 \subsection{Virulence-associated mutations and selection pressure}
 
@@ -1237,7 +1237,7 @@ $<$12~SNPs --- widely used for recent transmission in
 226~SRAs (27.4\%) into 105~clusters by single-linkage.
 
 The clustering rate differed markedly between sub-lineages:
-\lignee{L4.11.2} showed 29.7\% (217/731$+$3 basal) of SRAs in clusters,
+\lignee{L4.11.2} showed 29.7\% (217/732$+$2 basal) of SRAs in clusters,
 compared with 9.9\% (9/91) for \lignee{L4.11.1}.  No cross-lineage
 pair was detected below the 12-SNP threshold, confirming the complete
 epidemiological separation of the two sub-lineages.
@@ -1269,7 +1269,7 @@ to threshold choice.
 	\caption{Sensitivity analysis of transmission clustering at different
 		SPDI-distance thresholds.  Clustering defined by single-linkage.
 		Percentages computed over $n = 825$ (All), $n = 91$ (L4.11.1),
-		and $n = 734$ (L4.11.2 including 3~basal SRAs).}
+		and $n = 734$ (L4.11.2 including 2~basal SRAs).}
 	\label{tab:clustering_sensitivity}
 	\begin{tabular}{rrrrrr}
 		\toprule
@@ -1423,7 +1423,7 @@ barcodes.
 
 The identification of two complementary sub-lineages ---
 \lignee{L4.11.1} (91~SRAs, 107~core-exclusive markers) and
-\lignee{L4.11.2} (731~SRAs, 44~near-core-exclusive markers) --- substantially
+\lignee{L4.11.2} (732~SRAs, 44~near-core-exclusive markers) --- substantially
 refines the phylogenetic resolution within this previously undifferentiated
 clade.  \lignee{L4.11.1}, with 107~core-exclusive markers, is among the
 best-defined novel sub-lineages identified in lineage~4 to date, rivalling
@@ -1678,7 +1678,7 @@ based on 825~publicly available genomes from the
 TBannotator~v3.2 database.  Eight core-exclusive markers
 unambiguously define this lineage, and two novel sub-lineages ---
 \lignee{L4.11.1} (91~SRAs, 107~core-exclusive markers,
-predominantly Bangladesh, 86\% MDR) and \lignee{L4.11.2} (731~SRAs,
+predominantly Bangladesh, 86\% MDR) and \lignee{L4.11.2} (732~SRAs,
 44~near-core-exclusive markers, predominantly Peru, 27\% MDR) --- exhibit a
 striking phylogeographic partition, contrasting drug resistance
 trajectories, and independent IS6110 expansion patterns.
@@ -1741,7 +1741,7 @@ evolutionary strategies that sustain rare sub-lineages within L4's
 		\toprule
 		\textbf{Feature}           & \textbf{L4.11.1}            & \textbf{L4.11.2}                           \\
 		\midrule
-		SRAs                    & 91 (11.0\%)                 & 731 (88.6\%)                               \\
+		SRAs                    & 91 (11.0\%)                 & 732 (88.7\%)                               \\
 		Defining SPDI              & 1700209:G:A                 & 143666:C:T                                 \\
 		Core-exclusive markers     & 107                         & 16                                         \\
 		Geographic focus           & Bangladesh                  & Peru, USA                                  \\
@@ -2059,6 +2059,61 @@ Filliol I, Motiwala AS,Cavatore M, \textit{et al.}
 	survival and paradoxical drug resistance in the cryptic L4.14
 	sub-lineage despite profound structural decay.
 	\textit{Submitted}, 2025.
+
+	\bibitem{lerner2018}
+	Lerner TR, Queval CJ, Fearns A, et al.
+	Phthiocerol dimycocerosates promote access to the cytosol and intracellular burden of \textit{Mycobacterium tuberculosis} in lymphatic endothelial cells.
+	\textit{BMC Biol.} 2018;16:1.
+
+	\bibitem{rens2021}
+	Rens C, Chao JD, Sexton DL, et al.
+	Roles for phthiocerol dimycocerosate lipids in \textit{Mycobacterium tuberculosis} pathogenesis.
+	\textit{Microbiology (Reading).} 2021;167(3):001042.
+
+	\bibitem{forrellad2014}
+	Forrellad MA, McNeil M, Santangelo M de L, et al.
+	Role of the Mce1 transporter in the lipid homeostasis of \textit{Mycobacterium tuberculosis}.
+	\textit{Tuberculosis (Edinb).} 2014;94(2):170--177.
+
+	\bibitem{liu2025pimE}
+	Liu Y, Brown CM, Borges N, et al.
+	Mechanistic studies of mycobacterial glycolipid biosynthesis by the mannosyltransferase PimE.
+	\textit{Nat Commun.} 2025;16:3927.
+
+	\bibitem{sharma2022}
+	Sharma T, Alam A, Ehtram A, et al.
+	The \textit{Mycobacterium tuberculosis} PE\_PGRS protein family acts as an immunological decoy to subvert host immune response.
+	\textit{Int J Mol Sci.} 2022;23(1):525.
+
+	\bibitem{boot2017}
+	Boot M, van Winden VJC, Sparrius M, et al.
+	Cell envelope stress in mycobacteria is regulated by the novel signal transduction ATPase IniR in response to trehalose.
+	\textit{PLoS Genet.} 2017;13(12):e1007131.
+
+	\bibitem{beckert2012}
+	Beckert P, Hillemann D, Kohl TA, et al.
+	\textit{rplC} T460C identified as a dominant mutation in linezolid-resistant \textit{Mycobacterium tuberculosis} strains.
+	\textit{Antimicrob Agents Chemother.} 2012;56(5):2743--2745.
+
+	\bibitem{tiwari2019}
+	Tiwari P, Gosain TP, Singh M, et al.
+	Inorganic polyphosphate accumulation suppresses the dormancy response and virulence in \textit{Mycobacterium tuberculosis}.
+	\textit{J Biol Chem.} 2019;294(28):10819--10832.
+
+	\bibitem{singh2013}
+	Singh R, Singh M, Arora G, et al.
+	Polyphosphate deficiency in \textit{Mycobacterium tuberculosis} is associated with enhanced drug susceptibility and impaired growth in guinea pigs.
+	\textit{J Bacteriol.} 2013;195(12):2839--2851.
+
+	\bibitem{miner2009}
+	Miner MD, Chang JC, Pandey AK, et al.
+	Role of cholesterol in \textit{Mycobacterium tuberculosis} infection.
+	\textit{Indian J Exp Biol.} 2009;47(6):407--411.
+
+	\bibitem{rock2015}
+	Rock JM, Lang UF, Chase MR, et al.
+	DNA replication fidelity in \textit{Mycobacterium tuberculosis} is mediated by an ancestral prokaryotic proofreader.
+	\textit{Nat Genet.} 2015;47(6):677--681.
 
 \end{thebibliography}
 

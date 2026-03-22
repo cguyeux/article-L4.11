@@ -10,6 +10,15 @@
 \usepackage{setspace}
 \onehalfspacing
 
+% ── Float placement (avoid near-empty float pages) ────────────────────────
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.70}
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+
 % ── Packages scientifiques ───────────────────────────────────────────────────
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
@@ -430,7 +439,7 @@ TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 		within the circular representation of the MTBC tree.}
 	\label{fig:l4_phylogeny}
 \end{figure}
-\FloatBarrier
+
 
 \begin{figure}[htbp!]
 	\centering
@@ -445,7 +454,7 @@ TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 		higher marker count (107~core-exclusive SPDIs vs.\ 44 near-core-exclusive).}
 	\label{fig:phylo_tree}
 \end{figure}
-\FloatBarrier
+
 
 \begin{figure}[htbp!]
 	\centering
@@ -453,7 +462,7 @@ TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 	\caption{Contextualized Lineage~4 phylogeny (181~taxa, GTR+G model, 100~bootstrap replicates). Ten representative SRAs were sampled from each of the 20~L4 sub-lineages (L4.1--L4.18, with L4.11.1 and L4.11.2 treated separately; $n=5$ each). A single L4.1 strain serves as the outgroup. Bootstrap support values are shown at internal nodes.}
 	\label{fig:l4_context}
 \end{figure}
-\FloatBarrier
+
 
 The maximum-likelihood phylogeny of the 825~\lignee{L4.11} SRAs reveals
 a well-resolved tree with two clearly separated sub-clades: \lignee{L4.11.1}
@@ -492,7 +501,7 @@ consistent with a more recent clonal expansion.
 		intra-group distances, confirming the phylogenetic separation.}
 	\label{fig:heatmap}
 \end{figure}
-\FloatBarrier
+
 
 Principal Coordinates Analysis (PCoA) on the 825~\lignee{L4.11} patristic
 distances corroborates the phylogenetic dichotomy
@@ -542,7 +551,7 @@ expansion became centered on Bangladesh (e.g in Ethiopia, Sudan, Turkey).
 		resolves geographic sub-clusters within \lignee{L4.11.2}.}
 	\label{fig:pcoa}
 \end{figure}
-\FloatBarrier
+
 
 \paragraph{Core-exclusive markers.}
 
@@ -554,7 +563,7 @@ Among these, 8~core-exclusive SPDIs are absent from all SRAs outside
 \spdi{NC\_000962.3:1800962:C:T} (\textit{hisC1}, A23V)
 as the defining barcode for \lignee{L4.11}.
 
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\caption{Core-exclusive SPDIs defining \lignee{L4.11} (8~markers, all on
 		chromosome \spdi{NC\_000962.3}).}
@@ -608,7 +617,7 @@ When exclusivity is evaluated against the broader L4 lineage,
 69~of these markers remain absent from all non-\lignee{L4.11.1}
 SRAs, confirming the robustness of this sub-lineage definition.
 
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\caption{Summary of \lignee{L4.11.1}.}
 	\label{tab:l4111}
@@ -645,7 +654,7 @@ well-supported sub-lineage.  \lignee{L4.11.2} comprises 732~SRAs
 (88.7\% of \lignee{L4.11}) and is defined by 44~near-core-exclusive markers
 (Table~\ref{tab:l4112}).
 
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\caption{Near-core-exclusive SPDIs defining \lignee{L4.11.2}
 		(44~markers; exclusivity relaxed to $\pm$1--2~SPDIs across
@@ -796,7 +805,7 @@ Geographic metadata was available for 745 of 825~SRAs (90.3\%), spanning
 13~countries on 6~continents.  The two sub-lineages exhibit a striking
 phylogeographic partition (Table~\ref{tab:geo}).
 
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\caption{Geographic distribution of \lignee{L4.11} sub-lineages
 		(SRAs with available metadata).}
@@ -852,7 +861,7 @@ and Uganda ($p_{\mathrm{Bonf}} = 1.4 \times 10^{-3}$) with
 		count (745~SRAs with known country out of 825).}
 	\label{fig:geographic}
 \end{figure}
-\FloatBarrier
+
 
 \subsection{Spoligotype analysis}
 
@@ -946,7 +955,7 @@ suggesting a clonal MDR genotype rather than sequential accumulation.
 		consistent with a lineage-fixed MDR genotype.}
 	\label{fig:coresist}
 \end{figure}
-\FloatBarrier
+
 
 \paragraph{Extended resistance landscape (WHO Catalogue v2).}
 
@@ -1732,7 +1741,7 @@ evolutionary strategies that sustain rare sub-lineages within L4's
 
 % ── Comparison Table ─────────────────────────────────────────────────────────
 
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\small
 	\caption{Comparative summary of sub-lineages \lignee{L4.11.1} and \lignee{L4.11.2}.}

@@ -279,11 +279,11 @@ the sequencing library protocols do not introduce systematic biases
 between the two geographic foci.
 
 Per-BioProject comparison revealed that the \lignee{L4.11.1} SRAs,
-predominantly from PRJEB38938 (Bangladesh), had a lower median depth
-(65.3$\times$) than the \lignee{L4.11.2} SRAs from CRyPTIC projects
-PRJEB40777 (123.9$\times$) and PRJEB31443 (113.4$\times$).  SRAs
-from PRJNA595834 (TANDEM, Peru, Indonesia) and PRJEB26924 (Damien Foundation)
-exhibited elevated missing-gene counts (median 42), consistent with the
+predominantly from PRJEB39569 (Bangladesh), had a lower median depth
+(64.5$\times$) than the \lignee{L4.11.2} SRAs from CRyPTIC projects
+PRJEB41199 (125.0$\times$) and PRJEB76547 (171.9$\times$).  SRAs
+from PRJNA595834 (TANDEM, Peru, Indonesia)
+exhibited elevated missing-gene counts (median 34), consistent with the
 biologically confirmed Rv1758--Rv1762c deletion rather than sequencing
 artefacts.  No SRAs were excluded on the basis of sequencing quality.
 
@@ -1072,7 +1072,7 @@ population.
 \textit{In silico} IS6110 fingerprinting reveals that both sub-lineages
 carry a high IS6110 copy number, with an overall median of 10~copies.
 \lignee{L4.11.1} displays a bimodal distribution (range: 2--12, median
-10): SRAs from the Bangladeshi BioProject PRJEB38938 carry 2--4~copies,
+10): SRAs from the Bangladeshi BioProject PRJEB39569 carry 2--4~copies,
 while SRAs from other BioProjects carry 9--12~copies.
 \lignee{L4.11.2} shows a more homogeneous profile (range: 6--17, median
 10).  All other insertion sequences (IS1081, IS1557, IS1547,
@@ -1465,12 +1465,14 @@ exceed the global average by an order of magnitude, and
 \lignee{L4.11.1} carries an extraordinarily high burden.  However,
 these rates must be interpreted with caution.  The BioProject composition
 of our dataset reveals systematic ascertainment biases:
-PRJEB38938 (Bangladesh, 37~SRAs) is an MDR surveillance study,
-PRJEB32234 (Peru, 198~SRAs) focuses on drug-resistant lineages,
-and PRJNA595834 (Peru, 88~SRAs) targets MDR/XDR isolates from
-diabetes-comorbid patients.  Together, these three BioProjects --- all
-designed to enrich for resistant SRAs --- contribute 39\% of the
-dataset.  The observed MDR rates therefore represent upper-bound estimates
+21 of the 57~BioProjects (contributing 41\% of the SRAs) are flagged as
+MDR-enriched ($>$50\% MDR) in Table~\ref{tab:bioprojects}.
+Among the most prominent, PRJEB39569 (Bangladesh, 34~SRAs, 97\% MDR)
+is an MDR surveillance study,
+PRJEB32234 (41~SRAs, 61\% MDR) focuses on drug-resistant lineages,
+and PRJNA343736 (Peru, 86~SRAs, 67\% MDR) targets MDR isolates
+from the Lima metropolitan area.
+The observed MDR rates therefore represent upper-bound estimates
 rather than population-level prevalence.  Whether the residual
 association between \lignee{L4.11} and drug resistance persists after
 correcting for ascertainment bias will require comparison with
@@ -1641,7 +1643,7 @@ Several limitations should be acknowledged.
 \emph{First}, our dataset is BioProject-driven and not the product of
 systematic population-based sampling.  The high MDR rates observed ---
 particularly in \lignee{L4.11.1} (86\%) --- likely reflect the original
-study designs (e.g.\ PRJEB38938, a Bangladeshi MDR surveillance project)
+study designs (e.g.\ PRJEB39569, a Bangladeshi MDR surveillance project)
 rather than true population-level prevalence.  The drug resistance
 figures reported here should therefore be interpreted as upper-bound
 estimates.
@@ -1761,10 +1763,10 @@ evolutionary strategies that sustain rare sub-lineages within L4's
 
 All whole-genome sequencing data analysed in this study are publicly available
 from the NCBI Sequence Read Archive (SRA).  The 825~\lignee{L4.11} SRAs
-belong to 57~BioProjects, including PRJEB38938 (Bangladesh MDR surveillance),
-PRJEB32234 and PRJNA595834 (Peru drug-resistant isolates), PRJEB40777 and
-PRJEB31443 (CRyPTIC global collection~\cite{cryptic2022}), and PRJEB26924
-(Damien Foundation).  A complete list of SRA accession numbers and associated
+belong to 57~BioProjects, including PRJEB39569 (Bangladesh MDR surveillance),
+PRJEB32234 and PRJNA595834 (Peru drug-resistant isolates), and PRJEB41199
+and PRJEB76547 (CRyPTIC global collection~\cite{cryptic2022}).  A complete
+list of SRA accession numbers and associated
 metadata (BioProject, country, collection date, lineage assignment) is provided
 in Supplementary Table~S1.
 The maximum-likelihood phylogenetic tree (Newick format) is deposited at

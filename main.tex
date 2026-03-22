@@ -293,13 +293,14 @@ artefacts.  No SRAs were excluded on the basis of sequencing quality.
 Variants were represented in SPDI notation~\cite{mcinerney2004},
 enabling unambiguous identification across reference coordinates.
 
-A binary presence/absence matrix (pan-SPDI) was constructed and used as input
+A binary presence/absence matrix (pan-SPDI) was constructed on all polymorphic markers and used as input
 for maximum-likelihood inference with RAxML-NG~\cite{kozlov2019} under the
-BIN+$\Gamma$ model.  The input alignment included 825~\lignee{L4.11}
-SRAs plus up to 10~SRAs per non-target lineage and one outgroup.
+BIN+$\Gamma$ model. A similar analysis was performed on SNPs only using the GTR+$\Gamma$ (Gamma-Time Reversible) model, and very similar results were obtained (results not shown). The input alignment for the global tree reconstruction included 825~\lignee{L4.11}
+SRAs plus up to 10~SRAs per non-target lineage and one outgroup (see Figure 1).
 After removal of 70~exactly identical sequence pairs by RAxML-NG, the final
 alignment comprised 68\,124~sites and 4\,818~informative patterns across
-1\,095~taxa.
+1\,095~taxa, for the
+BIN+$\Gamma$  analysis.
 
 For each clade of interest, we computed:
 \begin{itemize}
@@ -319,20 +320,20 @@ markers from Coll, Freschi, Napier, Stucki, classification systems \cite{coll201
 Genotypic drug resistance predictions were derived from the annotated
 SNPs in the TBannotator~v3.2 variant reports for all 825~SRAs.
 Each SNP carries SnpEff functional annotation (gene, HGVS protein
-change, impact class) \cite{cingolani2012}; resistance-associated mutations were identified
+change, impact class) \cite{cingolani2012}. resistance-associated mutations were identified
 by cross-referencing with the WHO Catalogue of mutations associated
 with drug resistance (2nd~edition, 2023;~\cite{who2023catalogue}).
 A mutation was scored as resistance-conferring when the WHO grading
 was ``R'' (associated with resistance) or ``F'' (associated with resistance ---
-interim).  Resistance was assessed for first-line drugs (isoniazid,
-rifampicin, ethambutol, pyrazinamide) and key second-line agents
+interim).  Resistance was systematically assessed for first-line drugs (isoniazid,
+rifampicin, ethambutol, pyrazinamide) and for some key second-line drugs
 including fluoroquinolones, streptomycin, bedaquiline, and clofazimine.
-Multidrug resistance (MDR) was defined as concurrent resistance to
+Multidrug resistance (MDR) was defined as resistance to
 isoniazid and rifampicin.  Sub-lineage-specific resistance profiles
 were compared using Fisher's exact test and odds ratios with 95\%
 confidence intervals (Bonferroni-corrected).
 
-\subsubsection{IS6110 copy-number estimation and genomic structural variation}
+\subsubsection{IS6110 copy-number estimation and gene content analysis}
 
 Insertion sequence profiles were extracted from TBannotator~v3.2
 variant reports for all 825~SRAs.  TBannotator detects IS insertion
@@ -345,17 +346,16 @@ were computed for all 825~SRAs (91~\lignee{L4.11.1},
 
 Gene deletions were inferred from the variant reports
 (825~SRAs), which record ``missing genes'' (genes with $<$5\%
-coverage) and ``missing RD'' (named and custom genomic segments with
-insufficient coverage).  Deletions shared by $\geq$90\% of a
-sub-lineage were considered lineage-defining.
+coverage) associated to ``missing RD'' (those already named and new custom segments).  Deletions shared by $\geq$90\% of a
+sub-lineage were considered as lineage-defining.
 
-\subsubsection{In silico RD-typing}
+\subsubsection{In silico RD-typing and detection of new genomic structural variation}
 
 Regions of difference (RD) were typed \textit{in silico} using the
 \texttt{missing\_rd} and \texttt{large\_rd} fields of the TBannotator~v3.2
 variant reports, which catalogue 4\,850~genomic segments screened per
-strain, including both named RDs (RD715, DS5, DS13, RD3, ``149'',
-\textit{etc.}) and custom segments identified by the pipeline.
+strain, including both previously described RDs (RD715, DS5, DS13, RD3, ``149'',
+\textit{etc.}) and custom segments identified by the pipeline designated as CUS \cite{bespiatykh2021}.
 A segment was scored as deleted when its coverage fell below 5\%
 of the genome-wide median.
 
@@ -365,7 +365,7 @@ Virulence-associated mutations were annotated by functional category:
 PE/PPE family, \textit{mce} operons, ESX/Type~VII secretion, lipid
 metabolism, regulatory systems (sigma factors, two-component systems),
 and toxin--antitoxin systems.  Functional annotations were obtained from
-Mycobrowser and the literature.
+Mycobrowser (mycobrowser.epfl.ch) and the literature.
 
 Selection pressure was assessed using the site-based ratio of unique
 non-synonymous to synonymous variant positions ($p_N/p_S$), computed across
@@ -389,13 +389,13 @@ symmetric difference of their SPDI variant sets.  Because all SRAs
 were called against the same reference with an identical pipeline, this
 measure is functionally equivalent to a core-genome SNP distance.
 SRAs within $<$12~SNPs were defined as putative transmission clusters
-using single-linkage clustering.  Clustering rates were compared between
+using single-linkage clustering \cite{walker2013}.  Clustering rates were compared between
 sub-lineages using Fisher's exact test.
 
 \subsubsection{Homoplasy detection}
 
 Homoplastic mutations (convergent evolution) were identified as SPDI
-variants that arose independently on multiple branches of the ML tree.
+variants that arose independently on multiple branches of the Maximum likelihood (ML) tree.
 Sites present in $\geq$3 SRAs from both sub-lineages but absent from
 the common ancestor were flagged as candidate homoplasies.  Functional
 enrichment of homoplastic sites was assessed by gene category.
@@ -458,26 +458,20 @@ TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 The maximum-likelihood phylogeny of the 825~\lignee{L4.11} SRAs reveals
 a well-resolved tree with two clearly separated sub-clades: \lignee{L4.11.1}
 (91~SRAs, 11.0\%) and \lignee{L4.11.2} (731~SRAs, 88.6\%), plus
-three deep-branching basal SRAs (0.4\%) that lack both
+two deep-branching basal SRAs that lack both
 sub-lineage-defining markers.
 These basal SRAs --- SRR30679919 (Australia, PRJNA1161723),
-SRR33831563 (United States, PRJNA1237251), and SRR19276639
-(Peru, PRJNA707145) ---
+SRR33831563 (United States, PRJNA1237251),
 occupy a topologically ancestral position.
-The two former SRAs share 693~SNPs and carry
-11~IS6110 copies each, with 10~of 11 insertion positions in common.
-They are separated by 219~pairwise SNPs and display three
-shared small-segment deletions
-{\footnotesize CUS\_GS\_\allowbreak{}1155829\_\allowbreak{}1155913,
-CUS\_GS\_\allowbreak{}3741905\_\allowbreak{}3742046,
-CUS\_GS\_\allowbreak{}3707579\_\allowbreak{}3707631}.
-Strikingly, the IS6110 insertions in these basal SRAs predominantly
-occur in the forward orientation, contrasting with the
-uniformly reverse orientation observed in the rest of \lignee{L4.11}
+The two former SRAs share 693~SNPs (171 specific not found in H37Rv) and carry
+11~IS6110 copies each, with 10~of 11 insertion positions in common (among which 5 copies are found specifically in these two isolates at positions 36806, 139565, 1987131, 2169199, and 3377387).
+They are separated by 150~pairwise SNPs and display two shared small-segment deletions
+CUS\_GS\_\allowbreak{}1155829\_\allowbreak{}1155913,
+CUS\_GS\_\allowbreak{}3741905\_\allowbreak{}3742046.
+Strikingly, the IS6110 insertions in these two basal SRAs predominantly occur in the forward orientation, contrasting with the uniformly reverse orientation of these IS observed in the rest of \lignee{L4.11}
 (Section~\ref{sec:structural}).  Their intercontinental spread
 (Australia--United States) and deep-branching phylogenetic position
-suggest a relict ancestral lineage predating the divergence of
-the two main sub-clades.
+suggest a relict ancestral sister lineage predating the divergence of the two main 4.11 sub-lineages.
 The separation between both sub-lineages is confirmed by pairwise
 patristic distance analysis (Figure~\ref{fig:heatmap}): inter-group
 distances are 4.1$\times$ higher than intra-\lignee{L4.11.1} distances
@@ -518,7 +512,7 @@ Within the \lignee{L4.11.1} clade, a basal sub-clade of 7~isolates
 (Figure~\ref{fig:pcoa}a, green triangles).  One South African isolate
 (SRR35281599) carries the spoligotype SIT358 (octal 717777777760771,
 SITVIT2 clade T1), a pattern historically associated with Bangladesh
-and East Africa.  The five South African SRAs originate from a
+and East Africa, and described in 1995 for the first time (http://www.pasteur-guadeloupe.fr:8081/SITVIT2/query).  The five South African SRAs originate from a
 household transmission study (BioProject PRJNA1312808, ``HoTT DCTB'').
 All 7~Proto-\lignee{L4.11.1} SRAs carry a novel IS6110 insertion
 at position 2\,627\,395 in the forward orientation, a unique
@@ -530,9 +524,9 @@ copies within this locus.  The co-occurrence of both orientations at a
 single hotspot is one of the few exceptions to the otherwise uniform
 reverse-only IS6110 insertion pattern across \lignee{L4.11}
 (Section~\ref{sec:structural}).
-This basal positioning and geographic spread suggest that the ancestor
+This basal positioning and geographic spread, as well as more ancient results obtained using spoligotyping results suggest that the ancestor
 of \lignee{L4.11.1} had a wider distribution before the clonal
-expansion centred on Bangladesh.
+expansion became centered on Bangladesh (e.g in Ethiopia, Sudan, Turkey).
 
 \begin{figure}[htbp!]
 	\centering
@@ -581,11 +575,11 @@ as the defining barcode for \lignee{L4.11}.
 	\end{tabular}
 \end{table}
 
-Three additional markers that were core-exclusive in the initial v1 dataset
+Three additional markers that were core-exclusive in the initial v2 dataset
 (415~SRAs) lost this status upon dataset enrichment: \spdi{1483362:C:T}
 (Rv1320c, adenylate cyclase), \spdi{1899138:C:T} (Rv1673c), and
 \spdi{2778941:G:A} (Rv2476c/\textit{gdh}).  This underscores the importance of
-validating marker exclusivity across large, independently assembled datasets.
+validating barcode markers exclusivity across large, independently assembled datasets.
 
 \paragraph{Concordance with existing nomenclatures.}
 
@@ -598,14 +592,14 @@ Napier~4/4.9, Shitikov~4/4.9, and Stucki~4.10.  In the Freschi system,
 the remaining 94~SRAs (\lignee{L4.11.1} and basal) fall at the
 unresolved level~4; notably, \lignee{L4.11} is \emph{not} within
 Freschi~4.10.i2, which corresponds to a separate clade centred on
-H37Rv.  None of these systems resolves the full \lignee{L4.11} clade as
-a distinct entity, confirming that it represents a previously unnamed
-sub-lineage.
+H37Rv and the naming of L4.11 was wrongly attributed to a peruvian epidemic sub-clade.  None of the current classification systems resolved the full \lignee{L4.11} clade as
+a distinct entity, confirming that if, it represented a previously detected
+sub-lineage, its description was only relative to an limited epidemic clone. The mmpL5 frameshift variant found at position 777875:AC:A is indeed found exclusively in a subbranch of L4.11.2 that represents the most recently emerged sublone of L4.11.2, and whose maximum distance between two isolates is never superior to 90 SNPs (mean : 34 +/-12 SNPs) \cite{vargas2021,freschi2021}.
 
 \paragraph{Sub-lineage L4.11.1.}
 
-Within \lignee{L4.11}, a single robust sub-lineage emerges from the
-phylogenetic analysis.  \lignee{L4.11.1} comprises 91~SRAs (11.0\% of
+Within \lignee{L4.11}, a robust sub-lineage emerges from the
+phylogenetic analysis: L4.11.1.  \lignee{L4.11.1} \textit{sensu lato}, (i.e. including the 7 proto L4.11.1) comprises 91~SRAs (11.0\% of
 \lignee{L4.11}) and is supported by 530~shared SNPs (present in all
 91~SRAs), of which 107~are exclusive to \lignee{L4.11.1}
 within the \lignee{L4.11} dataset and absent from all
@@ -638,11 +632,11 @@ the level of Coll~4.9 / Stucki~4.10 (of which
 novel sub-lineage.  We propose the combination of
 \spdi{NC\_000962.3:33084:C:T} (Rv0031, Q199Q) and
 \spdi{NC\_000962.3:1700209:G:A} (Rv1508A)
-as the defining barcode for \lignee{L4.11.1}.
+as a potential defining barcode for \lignee{L4.11.1}.
 
-The core-exclusive set includes three insertion/deletion variants:
+The core-exclusive set also includes three more insertion/deletion variants:
 \spdi{1713356:G:GT}, \spdi{1993200:AA:C}, and \spdi{2379599:C:CA},
-further distinguishing this clade.
+further characerizing this sublineage.
 
 \paragraph{Sub-lineage L4.11.2.}
 
@@ -685,9 +679,9 @@ not captured by any existing classification system below the level of
 Coll~4.9.  We propose the combination of \spdi{NC\_000962.3:143666:C:T}
 (\textit{oxcA}, Rv0118c) and \spdi{NC\_000962.3:801008:A:G}
 (Rv0693, A29A) as the defining barcode for
-\lignee{L4.11.2}.  This sub-lineage likely corresponds to the clade designated
-as Freschi~4.11, which was studied by Vargas~et~al.~\cite{vargas2023} in the
-context of bedaquiline/clofazimine resistance.
+\lignee{L4.11.2}.  This sublineage is a larger sublineage than the one designated
+as Freschi~4.11, which was studied by Vargas~\textit{et al.} in the
+context of epistasia of drug-resistance mutations ~\cite{vargas2021}.
 
 The functional annotation of the 16~core-exclusive markers reveals a
 striking profile enriched in drug-target and lipid metabolism genes.
@@ -741,7 +735,7 @@ phylogeographic partition (Table~\ref{tab:geo}).
 
 \lignee{L4.11.2} is strongly associated with South America, particularly
 Peru (80.1\% of SRAs with metadata), consistent with the Lima-based MDR
-cluster described by Vargas~et~al.~\cite{vargas2023}.  In contrast,
+cluster described by Vargas \textit{et al.}.and Freschi \textit{et al.} ~\cite{vargas2021,freschi2021}.  In contrast,
 \lignee{L4.11.1} is predominantly found in Bangladesh (80.5\%) and
 East Africa (South Africa, Uganda), suggesting a distinct epidemiological
 niche centred on South Asia.
@@ -775,7 +769,7 @@ and Uganda ($p_{\mathrm{Bonf}} = 1.4 \times 10^{-3}$) with
 \textit{In silico} spoligotyping of all 825~SRAs reveals distinctive
 CRISPR spacer deletion patterns that mirror the SNP-based sub-lineage
 structure (Figure~\ref{fig:spoligo}).
-The canonical spacer~33 is absent in 100\% of \lignee{L4.11} SRAs,
+The canonical spacer~33-36 are absent in 100\% of \lignee{L4.11} SRAs,
 a hallmark of the T1 spoligotype family, while spacers~34--36 are
 virtually absent in \lignee{L4.11.1} ($<$\,5\%) but retained in
 \lignee{L4.11.2} ($\le$\,1\%).
@@ -813,20 +807,23 @@ erosion of the CRISPR locus specific to the Peruvian sub-lineage.
 		Note the differential presence of spacers 3--5 between sub-lineages.}
 	\label{fig:spoligo}
 \end{figure}
-\FloatBarrier
+\
+\subsection{L4.11 evolutionary context regarding Sreevatsan \textit{et al.} Principal Genetic Grouping (PGG) classification}
+
+The gyrA-katG allelic combination at H37Rv genomic positions 7585 and 2154724 respectively, allows to classify MTBC into three Principal Genetic Groups (PGG)\cite{sreevatsan1997,filliol2006}. It is interesting to note that depending on epidemic clusters, L4.11 may belong to PGG2 or to PGG3, contrarily to the L4.9 that only belongs to PGG3.
 
 \subsection{Drug resistance}
 
-Drug resistance data reveal markedly different profiles between the two
-sub-lineages.  Across all 825~\lignee{L4.11} SRAs with variant
+Drug resistance data reveal markedly different profiles between the  two L4.11
+sublineages.  Across all 825~\lignee{L4.11} SRAs with variant
 reports, 278~(33.8\%) are multidrug-resistant (MDR; resistant to both
 isoniazid and rifampicin).  This rate is an order of magnitude higher
-than the global average (\textasciitilde3.3\%, WHO 2024~\cite{who2024}).
+than the global  due to bias in sequencing (most sequencing studies are done on MDR-TB) (\textasciitilde3.3\%, WHO 2024~\cite{who2024}).
 
 \lignee{L4.11.1} carries an exceptionally high MDR burden: 78 of
 91~SRAs (85.7\%) are MDR\@.  \lignee{L4.11.2}, though more moderate,
-still has a MDR rate of 27.4\% (200/731), considerably above the global
-average.
+still has a high reported MDR rate of 27.4\% (200/731), considerably above the global
+average. However these rates do not inform us about the relative epidemic due to the L4.11 lineage as compared to other locally circulating lineages. 
 
 \paragraph{Co-resistance patterns.}
 
@@ -1750,7 +1747,7 @@ The authors declare no conflict of interest.
 	geographically limited sublineages.
 	\textit{Nature Genetics}, 48(12):1535--1543, 2016.
 
-	\bibitem{vargas2023}
+	\bibitem{vargas2021}
 	Vargas R Jr, Freschi L, Marin M, \textit{et al.}
 	Role of epistasis in amikacin, kanamycin, bedaquiline, and clofazimine
 	resistance in \textit{Mycobacterium tuberculosis} complex.
@@ -1791,6 +1788,17 @@ The authors declare no conflict of interest.
 	their association with drug resistance}, 2nd~edition.
 	Geneva: WHO, 2023.
 	WHO/UCN/TB/2023.7.
+
+    \bibitem{bespiatykh2021}
+    Bespiatykh D, Bespyatykh J, Mokrousov I, \textit{et al.}  
+    A Comprehensive Map of Mycobacterium tuberculosis Complex Regions of Difference
+    \textit{mSphere}, 6:4, e0053521.
+
+    \bibitem{cingolani2012}
+    Cingolani, P
+    Variant annotation and functional prediction: SnpEff in \textit{Variant calling}, Springer.
+    \textit{Methods and Protocols}, 289-314
+    
 
 	\bibitem{couvin2019}
 	Couvin D, David A, Zozio T, Rastogi N.
@@ -1852,7 +1860,7 @@ The authors declare no conflict of interest.
 
 	\bibitem{walker2013}
 	Walker TM, Ip CL, Harrell RH, \textit{et al.}
-	Whole-genome sequencing to delineate \textit{Mycobacterium tuberculosis}
+	Whole-genome sequencing to delineate       \textit{Mycobacterium tuberculosis}
 	outbreaks: a retrospective observational study.
 	\textit{The Lancet Infectious Diseases}, 13(2):137--146, 2013.
 
@@ -1867,6 +1875,11 @@ The authors declare no conflict of interest.
 	Restricted structural gene polymorphism in the \textit{Mycobacterium
 		tuberculosis} complex indicates evolutionarily recent global dissemination.
 	\textit{Proceedings of the National Academy of Sciences}, 94(18):9869--9874, 1997.
+
+    \bibitem{filliol2006}
+Filliol I, Motiwala AS,Cavatore M, \textit{et al.}
+    Global phylogeny of Mycobacterium tuberculosis based on single nucleotide polymorphism (SNP) analysis: insights into tuberculosis evolution, phylogenetic accuracy of other DNA fingerprinting systems, and recommendations for a minimal standard SNP set
+    \textit{J Bacteriol}, 188(2):759-772, 2006.
 
 	\bibitem{brites2015}
 	Brites D, Gagneux S.

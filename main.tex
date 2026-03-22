@@ -442,7 +442,7 @@ TBannotator~v3.2 variant reports (see Section~\ref{sec:methods}).
 		red, \lignee{L4.11.2} ($n = 731$).
 		Note the deep split between the two sub-lineages and the long
 		branch lengths within \lignee{L4.11.1}, consistent with its
-		higher marker count (107~core-exclusive SPDIs vs.\ 16).}
+		higher marker count (107~core-exclusive SPDIs vs.\ 44 near-core-exclusive).}
 	\label{fig:phylo_tree}
 \end{figure}
 \FloatBarrier
@@ -642,36 +642,77 @@ further characerizing this sublineage.
 
 The complement of \lignee{L4.11.1} within \lignee{L4.11} forms a second
 well-supported sub-lineage.  \lignee{L4.11.2} comprises 731~SRAs
-(88.6\% of \lignee{L4.11}) and is defined by 16~core-exclusive markers
+(88.6\% of \lignee{L4.11}) and is defined by 44~near-core-exclusive markers
 (Table~\ref{tab:l4112}).
 
 \begin{table}[ht]
 	\centering
-	\caption{Core-exclusive SPDIs defining \lignee{L4.11.2} (16~markers).}
+	\caption{Near-core-exclusive SPDIs defining \lignee{L4.11.2}
+		(44~markers; exclusivity relaxed to $\pm$1--2~SPDIs across
+		$\sim$730~SRAs to account for sequencing read errors).}
 	\label{tab:l4112}
-	\footnotesize
-	\begin{tabular}{rllll}
+	\scriptsize
+	\begin{tabular}{rllllr}
 		\toprule
-		\textbf{Pos.} & \textbf{SPDI}      & \textbf{Gene}        & \textbf{Effect} & \textbf{Product}                \\
+		\textbf{Pos.} & \textbf{SPDI}      & \textbf{Gene}        & \textbf{Effect} & \textbf{Product}                  & \textbf{$n$} \\
 		\midrule
-		130\,083      & \spdi{130082:A:C}  & \textit{ctpI}        & syn             & Cation-transporter ATPase I     \\
-		613\,989      & \spdi{613988:T:C}  & \textit{gabP}        & S318P           & GABA permease                   \\
-		761\,889      & \spdi{761888:G:C}  & \textit{rpoB}        & V695L           & RNA polymerase $\beta$ subunit  \\
-		812\,339      & \spdi{812338:T:C}  & \textit{rplE}        & V94A            & 50S ribosomal protein L5        \\
-		1\,285\,148   & \spdi{1285147:G:A} & \textit{pimE}        & G53S            & PIM mannosyltransferase         \\
-		2\,223\,214   & \spdi{2223213:T:G} & \textit{mpt64}/1979c & intergenic      & Immunogenic secreted protein    \\
-		2\,333\,753   & \spdi{2333752:T:G} & Rv2077c              & Q181P           & Transmembrane protein           \\
-		2\,827\,364   & \spdi{2827363:G:A} & \textit{orn}         & D70N            & Oligoribonuclease               \\
-		2\,982\,158   & \spdi{2982157:C:T} & Rv2664               & A21V            & Hypothetical protein            \\
-		3\,065\,517   & \spdi{3065516:G:A} & Rv2752c              & syn             & Conserved hypothetical          \\
-		3\,340\,871   & \spdi{3340870:G:T} & \textit{ppk1}        & G340C           & Polyphosphate kinase            \\
-		3\,505\,708   & \spdi{3505707:A:C} & \textit{fadE24}      & I116L           & Acyl-CoA dehydrogenase          \\
-		3\,630\,854   & \spdi{3630853:A:T} & \textit{alkB}        & W379R           & Alkane 1-monooxygenase          \\
-		4\,216\,745   & \spdi{4216744:T:C} & \textit{hisC2}/3771c & intergenic      & Near histidine aminotransferase \\
-		4\,286\,551   & \spdi{4286550:G:A} & Rv3821               & syn             & Integral membrane protein       \\
-		4\,397\,020   & \spdi{4397019:C:T} & Rv3910               & syn             & Transmembrane protein           \\
+		\multicolumn{6}{l}{\textit{Original 16 strict core-exclusive markers}} \\
+		\addlinespace
+		130\,083      & \spdi{130082:A:C}  & \textit{ctpI}        & syn             & Cation-transporter ATPase I       & 734 \\
+		613\,989      & \spdi{613988:T:C}  & \textit{gabP}        & S318P           & GABA permease                     & 734 \\
+		761\,889      & \spdi{761888:G:C}  & \textit{rpoB}        & V695L           & RNA polymerase $\beta$ subunit    & 734 \\
+		812\,339      & \spdi{812338:T:C}  & \textit{rplE}        & V94A            & 50S ribosomal protein L5          & 735 \\
+		1\,285\,148   & \spdi{1285147:G:A} & \textit{pimE}        & G53S            & PIM mannosyltransferase           & 736 \\
+		2\,223\,214   & \spdi{2223213:T:G} & ---                  & intergenic      & \textit{mpt64}/Rv1979c region     & 735 \\
+		2\,333\,753   & \spdi{2333752:T:G} & Rv2077c              & Q181P           & Transmembrane protein             & 738 \\
+		2\,827\,364   & \spdi{2827363:G:A} & \textit{orn}         & D70N            & Oligoribonuclease                 & 732 \\
+		2\,982\,158   & \spdi{2982157:C:T} & Rv2664               & A21V            & Hypothetical protein              & 734 \\
+		3\,065\,517   & \spdi{3065516:G:A} & Rv2752c              & syn             & Conserved hypothetical            & 734 \\
+		3\,340\,871   & \spdi{3340870:G:T} & \textit{ppk1}        & G340C           & Polyphosphate kinase              & 741 \\
+		3\,505\,708   & \spdi{3505707:A:C} & \textit{fadE24}      & I116L           & Acyl-CoA dehydrogenase            & 735 \\
+		3\,630\,854   & \spdi{3630853:A:T} & \textit{alkB}        & W379R           & Alkane 1-monooxygenase            & 732 \\
+		4\,216\,745   & \spdi{4216744:T:C} & ---                  & intergenic      & \textit{hisC2}/Rv3771c region     & 733 \\
+		4\,286\,551   & \spdi{4286550:G:A} & Rv3821               & syn             & Integral membrane protein         & 738 \\
+		4\,397\,020   & \spdi{4397019:C:T} & Rv3910               & syn             & Transmembrane protein             & 733 \\
+		\addlinespace
+		\multicolumn{6}{l}{\textit{Additional 28 near-core-exclusive markers ($\pm$1--2 absent)}} \\
+		\addlinespace
+		143\,667      & \spdi{143666:C:T}  & \textit{oxcA}        & ---             & Oxalyl-CoA decarboxylase          & 731 \\
+		188\,861      & \spdi{188860:G:A}  & ---                  & intergenic      & ---                               & 734 \\
+		203\,704      & \spdi{203703:T:C}  & \textit{mce1D}       & ---             & Mce1 operon, lipid import         & 732 \\
+		296\,325      & \spdi{296324:C:T}  & Rv0245               & ---             & Hypothetical protein              & 734 \\
+		363\,279      & \spdi{363278:G:A}  & Rv0298               & ---             & Conserved hypothetical            & 743 \\
+		409\,569      & \spdi{409568:G:A}  & \textit{iniB}        & ---             & Isoniazid-inducible protein B     & 733 \\
+		685\,990      & \spdi{685989:CG:C} & Rv0588               & del             & Conserved hypothetical             & 733 \\
+		801\,009      & \spdi{801008:A:G}  & \textit{rplC}        & syn             & 50S ribosomal protein L3          & 731 \\
+		1\,211\,542   & \spdi{1211541:A:C} & ---                  & intergenic      & ---                               & 733 \\
+		1\,301\,959   & \spdi{1301958:G:A} & \textit{PE12}        & ---             & PE-family protein                 & 731 \\
+		1\,749\,546   & \spdi{1749545:C:G} & \textit{dnaE1}       & ---             & DNA polymerase III $\alpha$       & 729 \\
+		1\,772\,016   & \spdi{1772015:G:C} & Rv1565c              & ---             & Conserved hypothetical            & 731 \\
+		1\,895\,249   & \spdi{1895248:G:T} & ---                  & intergenic      & ---                               & 737 \\
+		1\,910\,947   & \spdi{1910946:G:A} & Rv1685c              & ---             & Hypothetical protein              & 734 \\
+		1\,959\,824   & \spdi{1959823:C:T} & ---                  & intergenic      & ---                               & 733 \\
+		1\,978\,018   & \spdi{1978017:G:A} & \textit{fadD1}       & ---             & Fatty-acid-CoA synthetase         & 733 \\
+		2\,111\,114   & \spdi{2111113:C:T} & Rv1863c              & ---             & Hypothetical protein              & 734 \\
+		2\,649\,346   & \spdi{2649345:G:A} & \textit{phoH1}       & ---             & Phosphate starvation protein      & 733 \\
+		2\,701\,141   & \spdi{2701140:G:C} & \textit{lppR}        & ---             & Lipoprotein                       & 731 \\
+		3\,244\,184   & \spdi{3244183:A:G} & \textit{fadD26}      & ---             & FAAL for PDIM biosynthesis        & 733 \\
+		3\,311\,738   & \spdi{3311737:G:C} & Rv2958c              & ---             & Glycosyltransferase               & 732 \\
+		3\,338\,192   & \spdi{3338191:C:T} & \textit{gpdA2}       & ---             & Glycerol-3-phosphate dehydrogenase & 733 \\
+		3\,419\,274   & \spdi{3419273:C:T} & Rv3058c              & ---             & Hypothetical protein              & 732 \\
+		3\,821\,190   & \spdi{3821189:G:A} & Rv3402c              & ---             & Conserved hypothetical            & 735 \\
+		3\,974\,446   & \spdi{3974445:G:A} & \textit{hsaG}        & ---             & Cholesterol catabolism (Hsa path.)& 732 \\
+		3\,977\,383   & \spdi{3977382:A:T} & Rv3538               & ---             & Hypothetical protein              & 734 \\
+		4\,299\,695   & \spdi{4299694:G:C} & ---                  & intergenic      & ---                               & 736 \\
+		4\,400\,178   & \spdi{4400177:G:C} & ---                  & intergenic      & ---                               & 732 \\
 		\bottomrule
 	\end{tabular}
+	\medskip\\
+	\parbox{0.85\textwidth}{\raggedright\scriptsize
+		$n$: number of SRAs carrying the marker out of $\sim$734
+		\lignee{L4.11.2} SRAs.  Markers with $n < 734$ reflect ±1--2
+		sequencing read errors rather than true polymorphism.  Three
+		intergenic sites without annotated gene names are listed with ``---''.}
 \end{table}
 
 \lignee{L4.11.2} has 160~core SPDIs overall.  Like \lignee{L4.11.1}, it is
@@ -683,22 +724,71 @@ Coll~4.9.  We propose the combination of \spdi{NC\_000962.3:143666:C:T}
 as Freschi~4.11, which was studied by Vargas~\textit{et al.} in the
 context of epistasia of drug-resistance mutations ~\cite{vargas2021}.
 
-The functional annotation of the 16~core-exclusive markers reveals a
-striking profile enriched in drug-target and lipid metabolism genes.
-The \textit{rpoB} V695L mutation affects the rifampicin target (outside
-the canonical RRDR), while \textit{fadE24} I116L alters an acyl-CoA
-dehydrogenase involved in lipid degradation and flagged for isoniazid
-resistance by Mycobrowser.  The \textit{alkB} W379R mutation
-(tryptophan$\to$arginine) disrupts fatty acid $\omega$-hydroxylation,
-and \textit{pimE} G53S affects phosphatidylinositol mannoside (PIM)
-biosynthesis --- a key component of the mycobacterial cell envelope.
-The \textit{rplE} V94A mutation targets the 50S ribosomal protein~L5,
-and \textit{gabP} S318P alters a GABA permease involved in
-$\gamma$-aminobutyrate transport.  Together with the \textit{ppk1}
-G340C (persistence/biofilm), \textit{orn} D70N (stringent response),
-and the dual \textit{hisC} perturbation, these markers define
-a lineage with concurrent alterations in lipid metabolism, translation,
-cell envelope biogenesis, and stress response.
+The functional annotation of the 44~near-core-exclusive markers reveals a
+striking profile enriched in drug-target, lipid metabolism, cell-envelope,
+and stress-response genes, substantially reinforcing the portrait of
+\lignee{L4.11.2} as a clade with profoundly remodelled physiology.
+
+\textit{Lipid metabolism.}  Five markers directly target lipid pathways:
+\textit{fadE24} I116L (acyl-CoA dehydrogenase, $\beta$-oxidation),
+\textit{alkB} W379R (fatty acid $\omega$-hydroxylation),
+\textit{fadD1} (fatty-acid-CoA synthetase, mycolic acid activation),
+\textit{fadD26} (fatty-acid-AMP ligase essential for PDIM biosynthesis),
+and \textit{gpdA2} (glycerol-3-phosphate dehydrogenase).
+The co-occurrence of mutations in both $\beta$-oxidation (\textit{fadE24})
+and PDIM/phthiocerol biosynthesis (\textit{fadD26}) is particularly
+noteworthy, as PDIMs are major virulence lipids required for phagosome
+escape and macrophage survival.
+
+\textit{Cell envelope and host--pathogen interface.}  Five additional
+markers perturb cell-envelope biology:
+\textit{pimE} G53S (phosphatidylinositol mannoside biosynthesis),
+\textit{mce1D} (Mce1 operon, a cholesterol/lipid import system required
+for intracellular growth),
+\textit{PE12} (PE-family protein involved in immune evasion),
+\textit{iniB} (isoniazid-inducible protein~B, a marker of
+cell-wall stress), and
+\textit{lppR} (lipoprotein, host--pathogen interface).
+The mutation in \textit{mce1D} is significant: the Mce1 complex
+mediates fatty acid import during intracellular infection, and its
+perturbation has been linked to altered virulence and persistence
+in murine models.
+
+\textit{Drug targets and translation.}  Three markers affect the
+translational and transcriptional machinery:
+\textit{rpoB} V695L (RNA polymerase $\beta$ subunit, outside
+the canonical RRDR),
+\textit{rplE} V94A (50S ribosomal protein~L5), and
+\textit{rplC} (50S ribosomal protein~L3, a linezolid target).
+The synonymous \textit{rplC} variant, while not expected to alter
+protein sequence, may affect mRNA structure or codon usage bias.
+
+\textit{Persistence and stress response.}  Four markers target
+persistence-related pathways:
+\textit{ppk1} G340C (polyphosphate kinase, essential for biofilm
+and long-term macrophage survival),
+\textit{orn} D70N (oligoribonuclease, stringent response),
+\textit{phoH1} (phosphate starvation-inducible protein, Pho regulon),
+and \textit{hsaG} (cholesterol catabolism via the Hsa pathway,
+essential for persistence in the intracellular niche).
+The \textit{hsaG} mutation adds a direct link to cholesterol-dependent
+intracellular survival, complementing the Mce1 import perturbation.
+
+\textit{DNA replication fidelity.}  The \textit{dnaE1} mutation
+targets the $\alpha$ subunit of DNA polymerase~III, the primary
+replicase.  Alterations in replicative fidelity could influence
+the mutation rate and adaptive potential of this sub-lineage.
+
+\textit{Histidine biosynthesis.}  Together with the \textit{hisC1}~A23V
+coding mutation (which defines all \lignee{L4.11}), the intergenic
+variant near \textit{hisC2} constitutes a dual perturbation of
+histidine biosynthesis unique to \lignee{L4.11.2}.
+
+Taken together, these 44 markers define a lineage with concurrent
+alterations across six functional axes --- lipid metabolism, cell envelope,
+drug targets, persistence, replication fidelity, and amino acid
+biosynthesis --- pointing toward a comprehensively remodelled
+physiological programme.
 
 \subsection{Geographic distribution}
 
@@ -1333,7 +1423,7 @@ barcodes.
 
 The identification of two complementary sub-lineages ---
 \lignee{L4.11.1} (91~SRAs, 107~core-exclusive markers) and
-\lignee{L4.11.2} (731~SRAs, 16~core-exclusive markers) --- substantially
+\lignee{L4.11.2} (731~SRAs, 44~near-core-exclusive markers) --- substantially
 refines the phylogenetic resolution within this previously undifferentiated
 clade.  \lignee{L4.11.1}, with 107~core-exclusive markers, is among the
 best-defined novel sub-lineages identified in lineage~4 to date, rivalling
@@ -1449,7 +1539,7 @@ The \textit{ethR} intergenic mutation (\spdi{4328316:G:A}) lies in the
 regulatory region controlling ethionamide resistance, raising questions about
 baseline ethionamide susceptibility in this lineage.
 
-Among the 16~core-exclusive markers of \lignee{L4.11.2}, the \textit{rpoB}
+Among the 44~near-core-exclusive markers of \lignee{L4.11.2}, the \textit{rpoB}
 V695L mutation is particularly significant.  This substitution falls within
 the $\beta$~subunit of RNA polymerase --- the primary target of rifampicin
 --- although codon~695 lies outside the canonical RRDR (codons~426--452).
@@ -1587,7 +1677,7 @@ TBannotator~v3.2 database.  Eight core-exclusive markers
 unambiguously define this lineage, and two novel sub-lineages ---
 \lignee{L4.11.1} (91~SRAs, 107~core-exclusive markers,
 predominantly Bangladesh, 86\% MDR) and \lignee{L4.11.2} (731~SRAs,
-16~core-exclusive markers, predominantly Peru, 27\% MDR) --- exhibit a
+44~near-core-exclusive markers, predominantly Peru, 27\% MDR) --- exhibit a
 striking phylogeographic partition, contrasting drug resistance
 trajectories, and independent IS6110 expansion patterns.
 Notably, seven ``Proto-\lignee{L4.11.1}'' SRAs from South Africa

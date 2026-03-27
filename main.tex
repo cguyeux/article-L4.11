@@ -71,7 +71,7 @@
 
 	\lignee{L4.11.1} (91~SRAs, predominantly Bangladesh) exhibits 85.7\% multidrug resistance (MDR), driven by near-fixation of \textit{katG}~S315T and \textit{rpoB}~S450L, with compensatory \textit{rpoC} mutations confirming fitness restoration. \lignee{L4.11.2} (732~SRAs, predominantly Peru) shows 27.4\% MDR but carries the \textit{mmpR5}~Ile67fs bedaquiline/clofazimine resistance variant in 24\% of strains --- currently silenced by epistatic \textit{mmpL5}~Arg202fs but representing a tangible reactivation risk. IS6110 copy numbers (median 10 in both sub-lineages) are comparable to Beijing, and IS6110-mediated disruption of the DosR dormancy regulon and the \textit{vapC45}/\textit{vapB45} toxin--antitoxin system in \lignee{L4.11.2} parallels features of the Beijing lineage (L2).
 
-	Molecular clock analysis yields a nominal TMRCA of $\sim$1965, although the weak temporal signal ($R^2 = 0.008$) precludes reliable dating.  Transmission clustering (27\% of SRAs within 12-SNP clusters) confirms active recent transmission, particularly in \lignee{L4.11.2}. These findings identify \lignee{L4.11} as a lineage of major public health concern requiring enhanced molecular surveillance in South Asia and South America.
+	Molecular clock analysis suggests a recent divergence (nominal TMRCA $\sim$1965), although the weak temporal signal ($R^2 = 0.008$) precludes reliable dating.  Transmission clustering (27\% of SRAs within 12-SNP clusters) confirms active recent transmission, particularly in \lignee{L4.11.2}. These findings identify \lignee{L4.11} as a lineage of major public health concern requiring enhanced molecular surveillance in South Asia and South America.
 \end{abstract}
 
 \noindent\textbf{Keywords:} \mtb, phylogenomics, convergent evolution, drug resistance,
@@ -1337,12 +1337,14 @@ to threshold choice.
 
 \subsection{Spatio-temporal reconstruction}
 
-Molecular clock analysis with TreeTime estimated the TMRCA of \lignee{L4.11}
-to approximately \textbf{1965} (bootstrap 95\% CI: 1560--1996;
+Molecular clock analysis with TreeTime yielded a nominal TMRCA of
+$\sim$\textbf{1965} for \lignee{L4.11} (bootstrap 95\%~CI: 1560--1996;
 Figure~\ref{fig:clock}).
 However, the root-to-tip regression on the 143~SRAs with known
-collection dates yields $R^2 = 0.008$, indicating a very weak temporal
-signal.  The point estimate should therefore be regarded as preliminary.
+collection dates yields $R^2 = 0.008$, indicating a near-absent temporal
+signal.  This point estimate should be interpreted as indicating
+recent divergence (likely within the last century) rather than as a
+reliable date.
 The root-to-tip regression for \lignee{L4.11.2} displays a positive temporal
 trend consistent with clock-like evolution, whereas four
 \lignee{L4.11.1} SRAs were identified as clock outliers (apparent
@@ -1367,8 +1369,9 @@ report mugration-derived corridors and consider the geographic origin of
 	\caption{Root-to-tip regression for \lignee{L4.11} SRAs with known collection
 		dates.  Green points: \lignee{L4.11.1} (Bangladesh clade); orange points:
 		\lignee{L4.11.2} (Peru clade).  The dashed line indicates the clock
-		regression, with the estimated TMRCA around 1965
-		(bootstrap 95\% CI: 1560--1996; $R^2 = 0.008$).}
+		regression, with a nominal TMRCA of $\sim$1965
+		(bootstrap 95\%~CI: 1560--1996; $R^2 = 0.008$, near-absent
+		temporal signal).}
 	\label{fig:clock}
 \end{figure}
 
@@ -1448,7 +1451,12 @@ PRJEB32234 (41~SRAs, 61\% MDR) focuses on drug-resistant lineages,
 and PRJNA343736 (Peru, 86~SRAs, 67\% MDR) targets MDR isolates
 from the Lima metropolitan area.
 The observed MDR rates therefore represent upper-bound estimates
-rather than population-level prevalence.  Whether the residual
+rather than population-level prevalence.  For comparison, the WHO
+estimates national MDR/RR-TB rates at 1.9\% (new cases) and 15\%
+(retreatment) in Bangladesh, and 3.0\%/15\% in
+Peru~\cite{who2024} --- figures that are one to two orders of magnitude
+lower than the 85.7\% and 27.4\% observed here.
+Whether the residual
 association between \lignee{L4.11} and drug resistance persists after
 correcting for ascertainment bias will require comparison with
 population-representative surveillance cohorts.  In particular,
@@ -1601,9 +1609,14 @@ Several limitations should be acknowledged.
 systematic population-based sampling.  The high MDR rates observed ---
 particularly in \lignee{L4.11.1} (86\%) --- likely reflect the original
 study designs (e.g.\ PRJEB39569, a Bangladeshi MDR surveillance project)
-rather than true population-level prevalence.  The drug resistance
-figures reported here should therefore be interpreted as upper-bound
-estimates.
+rather than true population-level prevalence.  For context, the WHO
+estimates national MDR/RR-TB rates at 1.9\% (new cases) and 15\%
+(retreatment) in Bangladesh, and 3.0\%/15\% in Peru~\cite{who2024}.
+The observed rates in our dataset (85.7\% and 27.4\%) therefore exceed
+national averages by one to two orders of magnitude, confirming
+substantial ascertainment bias.  These figures should be interpreted
+as upper-bound estimates reflecting the MDR-enriched study designs
+from which our SRAs originate, not as population-level prevalence.
 \emph{Second}, all resistance profiles are genotypic predictions
 derived from SnpEff-annotated variant calls cross-referenced with
 the WHO Catalogue~v2, not phenotypic minimum
@@ -1611,20 +1624,37 @@ inhibitory concentration (MIC) measurements.  This is especially
 relevant for the ethambutol-resistant SRAs lacking canonical
 \textit{embB}/\textit{embC}/\textit{ubiA} mutations: without MIC data,
 the hypothesised cell-envelope-mediated intrinsic resistance remains
-unvalidated.
+unvalidated.  Notably, 112~SRAs in our dataset originate from the
+CRyPTIC consortium (PRJEB41199 and PRJEB76547), for which quantitative
+MIC data across 13~antibiotics --- including bedaquiline and
+ethambutol --- have been published~\cite{cryptic2022}.  Cross-referencing
+our genotypic predictions with these phenotypic data would provide a
+direct validation opportunity without requiring new laboratory work.
+We invite laboratories with access to \lignee{L4.11} clinical isolates
+to validate the key predictions of this study --- particularly the
+hypothesised intrinsic ethambutol resistance in \lignee{L4.11.2} and
+the silenced bedaquiline phenotype of \textit{mmpR5}~Ile67fs carriers
+--- through phenotypic drug susceptibility testing.
 \emph{Third}, molecular dating was performed with TreeTime under a
-strict clock model.  A Bayesian framework (e.g.\ BEAST) with relaxed
-clock and tip-dating would provide credible intervals for the TMRCA
-estimate (approximately 1965; bootstrap 95\% CI: 1560--1996) and better
-account for rate heterogeneity across
-branches.  Our root-to-tip regression on the 143~retained dated SRAs yields
-$R^2 = 0.008$, indicating a very weak temporal signal; the point
-estimates should therefore be treated as preliminary.
+strict clock model.  The root-to-tip regression on the 143~retained
+dated SRAs yields $R^2 = 0.008$, indicating a near-absent temporal
+signal.  The nominal TMRCA of $\sim$1965 (bootstrap 95\%~CI: 1560--1996)
+should therefore be regarded as a rough indication that the divergence
+of \lignee{L4.11} occurred in the recent past --- likely within the
+last century --- rather than as a reliable point estimate.
+A Bayesian framework (e.g.\ BEAST) with relaxed clock and tip-dating
+would better account for rate heterogeneity across branches, but is
+unlikely to overcome the fundamental limitation of sparse temporal
+sampling (143~dated SRAs over 18~years).
 \emph{Fourth}, the transmission clustering analysis relies on
 pairwise symmetric SPDI set differences rather than core-genome SNP
 distances, the standard metric in the field.  While the 12-SNP threshold
 is widely used, its applicability to SPDI-based distances has not been
-formally calibrated.
+formally calibrated.  A targeted comparison of SPDI set differences
+against core-genome SNP distances on a subset of isolates (e.g.\ the
+112~CRyPTIC SRAs, for which independent variant calls may be available)
+would establish whether the two metrics are interchangeable or whether
+a correction factor is needed.
 
 % ── Conclusion ───────────────────────────────────────────────────────────────
 \section{Conclusion}

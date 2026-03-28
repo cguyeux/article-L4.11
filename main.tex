@@ -962,13 +962,20 @@ respectively.  The canonical M306I mutation was found in 123~SRAs
 (15.0\%).  Notably, 18 of the 40~EMB-only resistant SRAs
 carry no known \textit{embB}, \textit{embC}, \textit{embA}, or
 \textit{ubiA} mutation.  This observation should be interpreted with
-caution: the EMB resistance predictions are genotypic and have not been
-confirmed by MIC testing; some of these 18~SRAs may harbour
-unrecognised resistance determinants or represent false-positive
-predictions.  Nevertheless, the hypothesis that lineage-fixed
+caution: the EMB resistance predictions are genotypic.
+Cross-referencing with phenotypic MIC data from the CRyPTIC
+compendium~\cite{cryptic2022} provides a partial test: among
+34~\lignee{L4.11.2} SRAs in CRyPTIC lacking any
+\textit{embB}/\textit{embC}/\textit{ubiA} mutation, 33 are
+phenotypically EMB-susceptible (MIC\,$\leq$\,2~$\mu$g/mL) and one
+is intermediate (MIC\,=\,4~$\mu$g/mL).  This argues against
+widespread intrinsic EMB resistance in \lignee{L4.11.2} and suggests
+that the 18~EMB-only resistant SRAs without canonical mutations
+may represent genotypic false positives or harbour unrecognised
+resistance determinants.  The hypothesis that lineage-fixed
 cell-envelope perturbations (\textit{pimE}~G53S, \textit{fadE24},
 \textit{alkB}~W379R) may confer low-level intrinsic EMB resistance
-remains plausible and testable through phenotypic characterisation~\cite{safi2019}.
+therefore remains unconfirmed by available phenotypic data~\cite{safi2019}.
 
 Additionally, the synonymous mutation \textit{embC}~R927R
 (\spdi{4243660:G:A}) is present in $>$97\% of SRAs analysed,
@@ -1010,7 +1017,19 @@ Nimmo~et~al.\ estimate this Ile67fs mutation to have emerged around
 which corresponds to a subset of our \lignee{L4.11.2}.
 These SRAs therefore carry a \textit{de facto} pre-antibiotic-era
 mmpR5 variant whose resistant phenotype is silenced by the co-occurring
-mmpL5 frameshift, underscoring the importance of considering epistatic
+mmpL5 frameshift.
+This epistatic prediction is directly confirmed by quantitative
+phenotypic data: among the 47~\lignee{L4.11.2} SRAs present in the
+CRyPTIC compendium~\cite{cryptic2022} (PRJEB41199), 10~carry the
+double \textit{mmpR5}~Ile67fs\,+\,\textit{mmpL5}~Arg202fs genotype,
+and all 9~with available bedaquiline MICs display
+MIC\,$\leq$\,0.015~$\mu$g/mL (susceptible), compared with a median
+MIC of 0.03~$\mu$g/mL (range 0.008--0.12) in the 37~non-carriers.
+The same pattern holds for clofazimine (all carriers:
+MIC\,$\leq$\,0.06~$\mu$g/mL, susceptible).  These phenotypic data
+independently validate the epistatic silencing model of
+Nimmo~et~al.~\cite{nimmo2024} within our \lignee{L4.11.2} dataset
+and underscore the importance of considering epistatic
 interactions when predicting bedaquiline susceptibility from genomic
 data~\cite{nimmo2024,vargas2023}.
 
@@ -1485,6 +1504,12 @@ phenotype.  Their phylogenetic dating places the emergence of this
 Ile67fs variant at approximately 1702~CE (95\%~CI 1657--1732), well
 before the antibiotic era, in what they termed the ``Peruvian clade''
 --- a clade that overlaps substantially with our \lignee{L4.11.2}.
+Our cross-referencing with quantitative CRyPTIC MIC
+data~\cite{cryptic2022} provides direct phenotypic confirmation:
+all 9~double-mutant carriers with available bedaquiline MICs are
+susceptible (MIC\,$\leq$\,0.015~$\mu$g/mL), compared with a median
+of 0.03~$\mu$g/mL in non-carriers --- consistent with the
+hypersusceptibility predicted by the epistatic model.
 This finding carries important implications: (i)~genotypic prediction of
 bedaquiline resistance from \textit{mmpR5} mutations alone is
 insufficient and must jointly consider \textit{mmpL5} status;
@@ -1506,14 +1531,19 @@ of 40~SRAs with EMB resistance \textit{in the absence of} INH or RIF
 resistance is atypical, as the classical resistance escalation pathway
 begins with INH mono-resistance before progressing to
 MDR\@.  The 18~EMB-only resistant SRAs without any canonical
-\textit{embB}/\textit{embC}/\textit{ubiA} mutation raise the hypothesis
+\textit{embB}/\textit{embC}/\textit{ubiA} mutation raised the hypothesis
 that lineage-fixed cell-envelope alterations --- particularly
 \textit{pimE}~G53S (PIM biosynthesis), \textit{alkB}~W379R (fatty acid
 $\omega$-hydroxylation), and the dual \textit{fadE24} perturbation
-(mycolic acid recycling) --- may collectively reduce ethambutol
-permeability or target accessibility, conferring low-level intrinsic
-resistance.  This hypothesis is testable through MIC determination
-on a panel of \lignee{L4.11.2} SRAs without \textit{embB} mutations.
+(mycolic acid recycling) --- might collectively reduce ethambutol
+permeability or target accessibility.  However, CRyPTIC phenotypic
+data~\cite{cryptic2022} do not support this hypothesis: among
+34~\lignee{L4.11.2} SRAs in the compendium lacking \textit{embB}
+mutations, 33 are phenotypically susceptible
+(MIC\,$\leq$\,2~$\mu$g/mL) and only one reaches the intermediate
+threshold (MIC\,=\,4~$\mu$g/mL).  The 18~genotypically EMB-resistant
+SRAs without canonical mutations therefore likely represent false-positive
+genotypic predictions rather than intrinsic resistance.
 
 \subsection{Molecular evolution: IS6110 expansion, dormancy remodelling, and convergence with Beijing}
 
@@ -1624,17 +1654,21 @@ inhibitory concentration (MIC) measurements.  This is especially
 relevant for the ethambutol-resistant SRAs lacking canonical
 \textit{embB}/\textit{embC}/\textit{ubiA} mutations: without MIC data,
 the hypothesised cell-envelope-mediated intrinsic resistance remains
-unvalidated.  Notably, 112~SRAs in our dataset originate from the
-CRyPTIC consortium (PRJEB41199 and PRJEB76547), for which quantitative
-MIC data across 13~antibiotics --- including bedaquiline and
-ethambutol --- have been published~\cite{cryptic2022}.  Cross-referencing
-our genotypic predictions with these phenotypic data would provide a
-direct validation opportunity without requiring new laboratory work.
+unvalidated.  To partially address this gap, we cross-referenced our
+genotypic predictions with quantitative MIC data from the CRyPTIC
+compendium~\cite{cryptic2022}: 47~of the 112~CRyPTIC SRAs in our
+dataset (PRJEB41199) have published MICs across 13~antibiotics.
+This cross-referencing confirmed the bedaquiline epistatic silencing
+(9/9 double-mutant carriers susceptible, MIC\,$\leq$\,0.015~$\mu$g/mL)
+but did not support the intrinsic ethambutol resistance hypothesis
+(33/34 SRAs without \textit{embB} mutations phenotypically susceptible).
+The remaining 65~CRyPTIC SRAs (including all 46 from PRJEB76547)
+were not present in the 2024 release of the compendium and may become
+available in future updates.
 We invite laboratories with access to \lignee{L4.11} clinical isolates
-to validate the key predictions of this study --- particularly the
-hypothesised intrinsic ethambutol resistance in \lignee{L4.11.2} and
-the silenced bedaquiline phenotype of \textit{mmpR5}~Ile67fs carriers
---- through phenotypic drug susceptibility testing.
+--- particularly from the under-characterised Bangladeshi
+\lignee{L4.11.1} clade --- to complement these findings through
+expanded phenotypic drug susceptibility testing.
 \emph{Third}, molecular dating was performed with TreeTime under a
 strict clock model.  The root-to-tip regression on the 143~retained
 dated SRAs yields $R^2 = 0.008$, indicating a near-absent temporal
